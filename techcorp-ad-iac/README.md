@@ -1,6 +1,6 @@
-# TechCorp AD — Infraestructura como código (Terraform + PowerShell)
+# techcorp-ad-iac
 
-Despliegue automatizado en AWS de un entorno **Active Directory** para el reto práctico TechCorp: un controlador de dominio (DC01), un cliente Windows unido al dominio, OUs, 20 usuarios desde CSV, grupos, recursos compartidos y GPO, con un único `terraform apply`.
+Despliegue con Terraform en AWS de una arquitectura mínima para Active Directory (TechCorp). Despliegue automatizado de un controlador de dominio (DC01), un cliente Windows unido al dominio, OUs, 20 usuarios desde CSV, grupos, recursos compartidos y GPO, con un único `terraform apply`.
 
 ## Requisitos
 
@@ -72,7 +72,7 @@ terraform output
 ```
 
 - **DC01**: IP pública en `dc01_public_ip`. Usuario: `Administrator` (contraseña: obtener con la clave `.pem` en EC2 → Conectar → Obtener contraseña). Tras los scripts, también `TECHCORP\admin.dominio` y usuarios del CSV.
-- **Cliente**: IP pública en `cliente_public_ip`. Tras la unión al dominio, iniciar sesión con `TECHCORP\&lt;usuario&gt;` (por ejemplo `ana.garcia` con contraseña del CSV).
+- **Cliente**: IP pública en `cliente_public_ip`. Tras la unión al dominio, iniciar sesión con `TECHCORP\<usuario>` (por ejemplo `ana.garcia` con contraseña del CSV).
 
 ## Destruir recursos
 

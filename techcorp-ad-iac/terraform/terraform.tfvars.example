@@ -1,0 +1,12 @@
+# Copiar a terraform.tfvars y rellenar valores sensibles.
+# No subir terraform.tfvars a control de versiones si contiene contraseñas.
+
+aws_region   = "eu-west-1"
+key_name     = "vockey"   # o el nombre de tu par de claves en AWS
+
+# Opcional: restringir RDP a tu IP (reemplazar por tu IP pública)
+# allowed_rdp_cidr = "1.2.3.4/32"
+
+# Contraseñas (usar terraform.tfvars o variables de entorno TF_VAR_*)
+safe_mode_password      = "TechCorpSafeMode2025!"
+domain_admin_password   = "Admin2025!"
